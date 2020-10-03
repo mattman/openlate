@@ -1,0 +1,30 @@
+%p#notice= notice
+
+%p
+  %b Owner:
+  = @shop.owner
+%p
+  %b Name:
+  = @shop.name
+%p
+  %b Address street:
+  = @shop.address_street
+%p
+  %b Address postcode:
+  = @shop.address_postcode
+%p
+  %b Address suburb:
+  = @shop.address_suburb
+%p
+  %b Address state:
+  = @shop.address_state
+%p
+  %b Lat:
+  = @shop.lat
+%p
+  %b Lng:
+  = @shop.lng
+
+= link_to 'Edit', edit_shop_path(@shop)
+\|
+= link_to 'Back', shops_path
