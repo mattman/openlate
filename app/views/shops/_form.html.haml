@@ -10,8 +10,16 @@
     = f.input :address_postcode
     = f.input :address_suburb
     = f.input :address_state
-    = f.input :lat
-    = f.input :lng
+    %h3 Opening Hours
+    %p These are your normal hours of trade week in week out, you can come back and update them any time
+    = f.simple_fields_for :opening_hour do |oh|
+      = oh.input :monday
+      = oh.input :tuesday
+      = oh.input :wednesday
+      = oh.input :thursday
+      = oh.input :friday
+      = oh.input :saturday
+      = oh.input :sunday
 
   .form-actions
-    = f.button :submit
+    = f.button :submit, class: "btn btn-primary"

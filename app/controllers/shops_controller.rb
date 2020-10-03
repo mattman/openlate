@@ -15,6 +15,7 @@ class ShopsController < ApplicationController
   # GET /shops/new
   def new
     @shop = Shop.new
+    @shop.build_opening_hour
   end
 
   # GET /shops/1/edit
@@ -69,6 +70,6 @@ class ShopsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def shop_params
-      params.require(:shop).permit(:owner_id, :name, :address_street, :address_postcode, :address_suburb, :address_state, :lat, :lng)
+      params.require(:shop).permit(:owner_id, :name, :address_street, :address_postcode, :address_suburb, :address_state, :lat, :lng, opening_hour_attributes: [:sunday, :monday, :tuesday, :wednesday, :thursday, :friday, :saturday])
     end
 end

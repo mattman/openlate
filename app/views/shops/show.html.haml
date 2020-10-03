@@ -6,26 +6,26 @@
   = @shop.address_state
 
 %h3 Opening Hours
-%ul
+%ul.list-group
   - @shop.opening_hour
-  %li
+  %li.list-group-item
     Monday:
     = @shop.opening_hour.monday
-  %li 
+  %li.list-group-item
     Tuesday:
     = @shop.opening_hour.tuesday
-  %li
+  %li.list-group-item
     Wednesday:
     = @shop.opening_hour.wednesday
-  %li
+  %li.list-group-item
     Thursday:
     = @shop.opening_hour.thursday
-  %li 
+  %li.list-group-item
     Friday:
     = @shop.opening_hour.friday
-  %li 
+  %li.list-group-item
     Saturday:
     = @shop.opening_hour.saturday
-  %li
+  %li.list-group-item
     Sunday:
     = @shop.opening_hour.sunday
